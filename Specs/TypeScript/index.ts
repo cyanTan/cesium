@@ -60,6 +60,39 @@ import {
   PositionPropertyArray,
   PolylineArrowMaterialProperty,
   NodeTransformationProperty,
+  GeometryInstance,
+  PolygonGeometry,
+  PolygonHierarchy,
+  BoxGeometry,
+  CoplanarPolygonGeometry,
+  CoplanarPolygonOutlineGeometry,
+  CorridorGeometry,
+  BoxOutlineGeometry,
+  CircleGeometry,
+  CircleOutlineGeometry,
+  CorridorOutlineGeometry,
+  CylinderOutlineGeometry,
+  EllipseGeometry,
+  FrustumGeometry,
+  GroundPolylineGeometry,
+  PlaneGeometry,
+  PolylineGeometry,
+  PolylineVolumeGeometry,
+  PolylineVolumeOutlineGeometry,
+  RectangleGeometry,
+  SimplePolylineGeometry,
+  SphereGeometry,
+  WallGeometry,
+  CylinderGeometry,
+  EllipseOutlineGeometry,
+  EllipsoidGeometry,
+  EllipsoidOutlineGeometry,
+  FrustumOutlineGeometry,
+  PlaneOutlineGeometry,
+  PolygonOutlineGeometry,
+  RectangleOutlineGeometry,
+  SphereOutlineGeometry,
+  WallOutlineGeometry,
 } from "cesium";
 
 // Verify ImageryProvider instances conform to the expected interface
@@ -158,3 +191,144 @@ property = materialProperty = new StripeMaterialProperty();
 property = materialProperty = new CheckerboardMaterialProperty();
 property = materialProperty = new PolylineDashMaterialProperty();
 property = materialProperty = new PolylineArrowMaterialProperty();
+
+let geometryInstance: GeometryInstance;
+
+geometryInstance = new GeometryInstance({
+  geometry: new BoxGeometry({
+    minimum: new Cartesian3(0, 0, 0),
+    maximum: new Cartesian3(1, 1, 1),
+  }),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new BoxOutlineGeometry({
+    minimum: new Cartesian3(0, 0, 0),
+    maximum: new Cartesian3(1, 1, 1),
+  }),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new CircleGeometry({
+    center: new Cartesian3(0, 0, 0),
+    radius: 10,
+  }),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new CircleOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new CoplanarPolygonGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new CoplanarPolygonOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new CorridorGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new CorridorGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new CorridorOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new CylinderGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new CylinderOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new EllipseGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new EllipseOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new EllipsoidGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new EllipsoidOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new FrustumGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new FrustumOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new GroundPolylineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new PlaneGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new PlaneOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new PolygonGeometry({ polygonHierarchy: new PolygonHierarchy() }),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new PolygonOutlineGeometry({
+    polygonHierarchy: new PolygonHierarchy(),
+  }),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new PolylineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new PolylineVolumeGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new PolylineVolumeOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new RectangleGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new RectangleOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new SimplePolylineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new SphereGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new SphereOutlineGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new WallGeometry(),
+});
+
+geometryInstance = new GeometryInstance({
+  geometry: new WallOutlineGeometry(),
+});

@@ -4,6 +4,21 @@ import DeveloperError from "./DeveloperError.js";
 import Matrix4 from "./Matrix4.js";
 
 /**
+ * @constructor
+ */
+function GeometryFactory() {}
+
+/**
+ * Returns a geometry.
+ *
+ * @param {GeometryFactory} geometryFactory A description of the circle.
+ * @returns {Geometry|undefined} The computed vertices and indices.
+ */
+GeometryFactory.createGeometry = function (geometryFactory) {
+  DeveloperError.throwInstantiationError();
+};
+
+/**
  * Geometry instancing allows one {@link Geometry} object to be positions in several
  * different locations and colored uniquely.  For example, one {@link BoxGeometry} can
  * be instanced several times, each with a different <code>modelMatrix</code> to change
@@ -13,7 +28,7 @@ import Matrix4 from "./Matrix4.js";
  * @constructor
  *
  * @param {Object} options Object with the following properties:
- * @param {Geometry} options.geometry The geometry to instance.
+ * @param {Geometry|GeometryFactory} options.geometry The geometry to instance.
  * @param {Matrix4} [options.modelMatrix=Matrix4.IDENTITY] The model matrix that transforms to transform the geometry from model to world coordinates.
  * @param {Object} [options.id] A user-defined object to return when the instance is picked with {@link Scene#pick} or get/set per-instance attributes with {@link Primitive#getGeometryInstanceAttributes}.
  * @param {Object} [options.attributes] Per-instance attributes like a show or color attribute shown in the example below.
